@@ -72,7 +72,6 @@ C:\TestRepos\ClassicLibrary\ClassicLibrary\bin\System.Web.Razor.xml
 C:\TestRepos\ClassicLibrary\ClassicLibrary\bin\System.Web.WebPages.xml
 C:\TestRepos\ClassicLibrary\ClassicLibrary\bin\System.Web.WebPages.Deployment.xml
 C:\TestRepos\ClassicLibrary\ClassicLibrary\bin\System.Web.WebPages.Razor.xml
-C:\TestRepos\ClassicLibrary\ClassicLibrary\obj\Debug\ClassicLibrary.csprojResolveAssemblyReference.cache
 C:\TestRepos\ClassicLibrary\ClassicLibrary\obj\Debug\ClassicLibrary.dll
 C:\TestRepos\ClassicLibrary\ClassicLibrary\obj\Debug\ClassicLibrary.pdb
 C:\TestRepos\ClassicLibrary\ClassicLibrary\bin\Microsoft.Practices.ServiceLocation.dll
