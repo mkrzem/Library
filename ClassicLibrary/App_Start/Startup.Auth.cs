@@ -10,6 +10,7 @@ using Microsoft.Owin.Security.OAuth;
 using Owin;
 using ClassicLibrary.Models;
 using ClassicLibrary.Providers;
+using ClassicLibrary.DAL.Model;
 
 namespace ClassicLibrary
 {

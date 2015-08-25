@@ -8,6 +8,7 @@ using System.Web;
 using Microsoft.AspNet.Identity.EntityFramework;
 using ClassicLibrary.DAL.Abstract;
 using ClassicLibrary.DAL.Concrete;
+using ClassicLibrary.DAL.Model;
 
 namespace ClassicLibrary.App_Start
 {
