@@ -1,6 +1,11 @@
 using System;
 using Microsoft.Practices.Unity;
 using Microsoft.Practices.Unity.Configuration;
+using Microsoft.AspNet.Identity;
+using ClassicLibrary.Models;
+using Microsoft.Owin.Security;
+using System.Web;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace ClassicLibrary.App_Start
 {
@@ -36,7 +41,9 @@ namespace ClassicLibrary.App_Start
             // container.LoadConfiguration();
 
             // TODO: Register your types here
-            // container.RegisterType<IProductRepository, ProductRepository>();
+            // container.RegisterType<IProductRepository, ProductRepository>();            
+            container.RegisterType<IAuthenticationManager>(new InjectionFactory(c => HttpContext.Current.GetOwinContext().Authentication));
+            container.RegisterType<IUserStore<ApplicationUser>, UserStore<ApplicationUser>>(new InjectionConstructor(typeof(ApplicationDbContext)));
         }
     }
 }
