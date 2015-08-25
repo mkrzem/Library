@@ -41,6 +41,11 @@ namespace ClassicLibrary
             bundles.Add(new StyleBundle("~/Content/css").Include(
                  "~/Content/bootstrap.css",
                  "~/Content/Site.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/angular").Include(
+                "~/Scripts/angular/angular.js",
+                "~/Scripts/angular/angular.route.js",
+                "~/Scripts/angular/angular.resource.js"));
         }
     }
 }
