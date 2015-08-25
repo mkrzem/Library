@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ClassicLibrary.DAL.Abstract
 {
-    interface IDataService
+    public interface IDataService: IDisposable
     {
         Repository<Book> Books { get; }
         Repository<BookQueue> QueuedBooks { get; }

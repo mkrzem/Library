@@ -63,7 +63,9 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Concrete\LibraryDbContext.cs" />
     <Compile Include="Concrete\Repository.cs" />
+    <Compile Include="Concrete\UnitOfWork.cs" />
     <Compile Include="Model\Book.cs" />
+    <Compile Include="Model\BookQueue.cs" />
     <Compile Include="Model\IdentityModels.cs" />
     <Compile Include="Model\ReaderLoan.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

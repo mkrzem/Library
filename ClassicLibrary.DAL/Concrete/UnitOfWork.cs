@@ -11,20 +11,25 @@ namespace ClassicLibrary.DAL.Concrete
     public class UnitOfWork : IDataService
     {
         private bool disposed = false;
-        private ILibraryDbContext _context;
-        private Repository<Book> _books;
-        private Repository<BookQueue> _queuedBooks;
-        private Repository<BorrowedBook> _borrowedBooks;
+        private ILibraryDbContext context;
+        private Repository<Book> books;
+        private Repository<BookQueue> queuedBooks;
+        private Repository<BorrowedBook> borrowedBooks;
+
+        public UnitOfWork(ILibraryDbContext context)
+        {
+            this.context = context;
+        }
         public Repository<Book> Books
         {
             get
             {
-                if (_books == null)
+                if (books == null)
                 {
-                    _books = new Repository<Book>(_context);
+                    books = new Repository<Book>(context);
                 }
 
-                return _books;
+                return books;
             }
         }
 
@@ -32,12 +37,12 @@ namespace ClassicLibrary.DAL.Concrete
         {
             get
             {
-                if (_queuedBooks == null)
+                if (queuedBooks == null)
                 {
-                    _queuedBooks = new Repository<BookQueue>(_context);
+                    queuedBooks = new Repository<BookQueue>(context);
                 }
 
-                return _queuedBooks;
+                return queuedBooks;
             }
         }
 
@@ -45,18 +50,18 @@ namespace ClassicLibrary.DAL.Concrete
         {
             get
             {
-                if (_borrowedBooks == null)
+                if (borrowedBooks == null)
                 {
-                    _borrowedBooks = new Repository<BorrowedBook>(_context);
+                    borrowedBooks = new Repository<BorrowedBook>(context);
                 }
 
-                return _borrowedBooks;
+                return borrowedBooks;
             }
         }
 
         public void Save()
         {
-            _context.SaveChanges();
+            context.SaveChanges();
         }
 
         protected virtual void Dispose(bool disposing)
@@ -68,7 +73,7 @@ namespace ClassicLibrary.DAL.Concrete
 
             if (disposing)
             {
-                _context.Dispose();
+                context.Dispose();
             }
 
             disposed = true;

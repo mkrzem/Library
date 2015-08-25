@@ -48,6 +48,7 @@ namespace ClassicLibrary.App_Start
             container.RegisterType<IAuthenticationManager>(new InjectionFactory(c => HttpContext.Current.GetOwinContext().Authentication));
             container.RegisterType<IUserStore<ApplicationUser>, UserStore<ApplicationUser>>(new InjectionConstructor(typeof(ApplicationDbContext)));
             container.RegisterType<ILibraryDbContext, LibraryDbContext>();
+            container.RegisterType<IDataService, UnitOfWork>();
         }
     }
 }
