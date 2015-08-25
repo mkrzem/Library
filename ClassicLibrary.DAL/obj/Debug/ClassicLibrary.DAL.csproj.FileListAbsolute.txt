@@ -1,4 +1,3 @@
-C:\TestRepos\ClassicLibrary\ClassicLibrary.DAL\obj\Debug\ClassicLibrary.DAL.csprojResolveAssemblyReference.cache
 C:\TestRepos\ClassicLibrary\ClassicLibrary.DAL\bin\Debug\ClassicLibrary.DAL.dll.config
 C:\TestRepos\ClassicLibrary\ClassicLibrary.DAL\bin\Debug\ClassicLibrary.DAL.dll
 C:\TestRepos\ClassicLibrary\ClassicLibrary.DAL\bin\Debug\ClassicLibrary.DAL.pdb
@@ -8,3 +7,7 @@ C:\TestRepos\ClassicLibrary\ClassicLibrary.DAL\bin\Debug\EntityFramework.xml
 C:\TestRepos\ClassicLibrary\ClassicLibrary.DAL\bin\Debug\EntityFramework.SqlServer.xml
 C:\TestRepos\ClassicLibrary\ClassicLibrary.DAL\obj\Debug\ClassicLibrary.DAL.dll
 C:\TestRepos\ClassicLibrary\ClassicLibrary.DAL\obj\Debug\ClassicLibrary.DAL.pdb
+C:\TestRepos\ClassicLibrary\ClassicLibrary.DAL\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\TestRepos\ClassicLibrary\ClassicLibrary.DAL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\TestRepos\ClassicLibrary\ClassicLibrary.DAL\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\TestRepos\ClassicLibrary\ClassicLibrary.DAL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml

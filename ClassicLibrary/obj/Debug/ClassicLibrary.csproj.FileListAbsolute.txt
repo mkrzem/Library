@@ -87,3 +87,5 @@ C:\TestRepos\ClassicLibrary\ClassicLibrary\bin\Microsoft.Practices.Unity.Configu
 C:\TestRepos\ClassicLibrary\ClassicLibrary\bin\Microsoft.Practices.Unity.Mvc.xml
 C:\TestRepos\ClassicLibrary\ClassicLibrary\bin\Microsoft.Practices.Unity.RegistrationByConvention.xml
 C:\TestRepos\ClassicLibrary\ClassicLibrary\obj\Debug\ClassicLibrary.csprojResolveAssemblyReference.cache
+C:\TestRepos\ClassicLibrary\ClassicLibrary\bin\ClassicLibrary.DAL.dll
+C:\TestRepos\ClassicLibrary\ClassicLibrary\bin\ClassicLibrary.DAL.pdb

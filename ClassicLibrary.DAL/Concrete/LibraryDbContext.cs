@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity.Infrastructure;
+using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace ClassicLibrary.DAL.Concrete
 {
@@ -15,6 +16,11 @@ namespace ClassicLibrary.DAL.Concrete
         {
             return Set<T>();
         }
-        
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Conventions.Remove<PluralizingEntitySetNameConvention>();
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }
