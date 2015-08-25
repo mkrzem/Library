@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassicLibrary", "ClassicLi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassicLibrary.Tests", "ClassicLibrary.Tests\ClassicLibrary.Tests.csproj", "{610DB9A9-50AB-46D9-A770-8358608FB795}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassicLibrary.DAL", "ClassicLibrary.DAL\ClassicLibrary.DAL.csproj", "{8DFBF2B2-B69B-480D-8655-154D43BB07C0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{610DB9A9-50AB-46D9-A770-8358608FB795}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{610DB9A9-50AB-46D9-A770-8358608FB795}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{610DB9A9-50AB-46D9-A770-8358608FB795}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DFBF2B2-B69B-480D-8655-154D43BB07C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DFBF2B2-B69B-480D-8655-154D43BB07C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DFBF2B2-B69B-480D-8655-154D43BB07C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DFBF2B2-B69B-480D-8655-154D43BB07C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -86,3 +86,4 @@ C:\TestRepos\ClassicLibrary\ClassicLibrary\bin\Microsoft.Practices.Unity.xml
 C:\TestRepos\ClassicLibrary\ClassicLibrary\bin\Microsoft.Practices.Unity.Configuration.xml
 C:\TestRepos\ClassicLibrary\ClassicLibrary\bin\Microsoft.Practices.Unity.Mvc.xml
 C:\TestRepos\ClassicLibrary\ClassicLibrary\bin\Microsoft.Practices.Unity.RegistrationByConvention.xml
+C:\TestRepos\ClassicLibrary\ClassicLibrary\obj\Debug\ClassicLibrary.csprojResolveAssemblyReference.cache

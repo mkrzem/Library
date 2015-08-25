@@ -6,6 +6,8 @@ using ClassicLibrary.Models;
 using Microsoft.Owin.Security;
 using System.Web;
 using Microsoft.AspNet.Identity.EntityFramework;
+using ClassicLibrary.DAL.Abstract;
+using ClassicLibrary.DAL.Concrete;
 
 namespace ClassicLibrary.App_Start
 {
@@ -44,6 +46,7 @@ namespace ClassicLibrary.App_Start
             // container.RegisterType<IProductRepository, ProductRepository>();            
             container.RegisterType<IAuthenticationManager>(new InjectionFactory(c => HttpContext.Current.GetOwinContext().Authentication));
             container.RegisterType<IUserStore<ApplicationUser>, UserStore<ApplicationUser>>(new InjectionConstructor(typeof(ApplicationDbContext)));
+            container.RegisterType<ILibraryDbContext, LibraryDbContext>();
         }
     }
 }
