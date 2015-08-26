@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNet.Identity
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -18,11 +19,28 @@
                     <span class="icon-bar"></span>
                 </button>
                 @Html.ActionLink("Library", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @if (Request.IsAuthenticated && User.IsInRole("Admin"))
+            {
+                    <div class="dropdown navbar-header">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            Admin Stuff
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li> @Html.ActionLink("Add Book", "Add", "Admin")</li>
+                            <li>@Html.ActionLink("Manage Users", "Users", "Admin")</li>
+
+                        </ul>
+                    </div>
+                }
             </div>
+            
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
-                    <li>@Html.ActionLink("API", "Index", "Help", new { area = "HelpPage" }, null)</li>
+                    
+                    <li></li>
+                    @*<li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
+                    <li>@Html.ActionLink("API", "Index", "Help", new { area = "HelpPage" }, null)</li>*@
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>

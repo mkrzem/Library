@@ -46,7 +46,7 @@ namespace ClassicLibrary.App_Start
             // TODO: Register your types here
             // container.RegisterType<IProductRepository, ProductRepository>();            
             container.RegisterType<IAuthenticationManager>(new InjectionFactory(c => HttpContext.Current.GetOwinContext().Authentication));
-            container.RegisterType<IUserStore<ApplicationUser>, UserStore<ApplicationUser>>(new InjectionConstructor(typeof(ApplicationDbContext)));
+            container.RegisterType<IUserStore<ApplicationUser>, UserStore<ApplicationUser>>(new InjectionConstructor(typeof(LibraryDbContext)));
             container.RegisterType<ILibraryDbContext, LibraryDbContext>();
             container.RegisterType<IDataService, UnitOfWork>();
         }

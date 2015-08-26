@@ -67,7 +67,7 @@
     <Compile Include="Model\Book.cs" />
     <Compile Include="Model\BookQueue.cs" />
     <Compile Include="Model\IdentityModels.cs" />
-    <Compile Include="Model\ReaderLoan.cs" />
+    <Compile Include="Model\BorrowedBook.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
