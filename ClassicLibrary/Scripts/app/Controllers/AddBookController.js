@@ -1,4 +1,4 @@
-﻿app.controller('AddBookController', ['$scope', '$location',  function ($scope, $location) {
+﻿app.controller('AddBookController', ['$scope', '$location', 'bookService',  function ($scope, $location, bookService) {
     $scope.newBook= {
         Name: '',
         Genre: 'Drama',
@@ -9,9 +9,11 @@
 
     $scope.$location = $location;
 
-    //$scope.save = function() {
-    //    var result = bookService.save($scope.newBook.Name, $scope.newBook.Genre, $scope.newBook.Author);
-
-        
-   // };
+    bookService.genres().then(function(data) {
+        $scope.genres = data.data;
+    });
+    
+    $scope.save = function() {
+        var result = bookService.save($scope.newBook.Name, $scope.newBook.Genre, $scope.newBook.Author);        
+    };
 }]);
