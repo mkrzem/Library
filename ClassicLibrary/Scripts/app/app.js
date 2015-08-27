@@ -1,4 +1,8 @@
 ﻿var app = angular.module('LibraryApp', ['ngRoute']);
+
+app.controller('MainController', ['$scope', '$location', function ($scope, $location) {
+    $scope.$location = $location;
+}]);
     
 app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
     $routeProvider
@@ -15,8 +19,8 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
             redirectTo: '/'
         });
 
-    $locationProvider.html5Mode({
-        enable: true,
-        requireBase: false
-    });
+    //$locationProvider.html5Mode({
+    //    enable: true,
+    //    requireBase: false
+    //});
 }]);

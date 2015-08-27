@@ -10,7 +10,7 @@
     $scope.$location = $location;
 
     bookService.genres().then(function(data) {
-        $scope.genres = data.data;
+        $scope.genres = data;
     });
     
     $scope.save = function() {
