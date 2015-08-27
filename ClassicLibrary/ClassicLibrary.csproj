@@ -266,6 +266,7 @@
     <Content Include="Scripts\app\Controllers\AddBookController.js" />
     <Content Include="Scripts\app\Controllers\HomeController.js" />
     <Content Include="Scripts\angular\angular.min.js.map" />
+    <Content Include="Scripts\app\Services\BookService.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\errors.json" />
@@ -1080,7 +1081,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\" />
-    <Folder Include="Infrastructure\Roles\" />
     <Folder Include="Views\Admin\" />
   </ItemGroup>
   <ItemGroup>
