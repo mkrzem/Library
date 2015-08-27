@@ -44,8 +44,12 @@ namespace ClassicLibrary
 
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
                 "~/Scripts/angular/angular.js",
-                "~/Scripts/angular/angular.route.js",
-                "~/Scripts/angular/angular.resource.js"));
+                "~/Scripts/angular/angular-route.js",
+                "~/Scripts/angular/angular-resource.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/angularApp")
+                .Include("~/Scripts/app/app.js")
+                .IncludeDirectory("~/Scripts/app/Controllers", "*.js", true));
         }
     }
 }

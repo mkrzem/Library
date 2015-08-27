@@ -1,6 +1,6 @@
 ﻿@using Microsoft.AspNet.Identity
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="LibraryApp">
 <head>
     <meta charset="utf-8" />
     <title>@ViewBag.Title - My ASP.NET Application</title>
@@ -9,7 +9,7 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
-<body>
+<body >
     <div class="navbar navbar navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -27,7 +27,7 @@
                             <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                            <li> @Html.ActionLink("Add Book", "Add", "Admin")</li>
+                            <li><a href="#/AddBook">Add Book</a> </li> @*@Html.ActionLink("Add Book", "Add", "Admin")</li>*@
                             <li>@Html.ActionLink("Manage Users", "Users", "Admin")</li>
 
                         </ul>
@@ -58,6 +58,7 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/angular")
+    @Scripts.Render("~/bundles/angularApp")
     @RenderSection("Scripts", required: false)
 </body>
 </html>
