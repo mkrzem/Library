@@ -1,0 +1,18 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "net452": {
+      "wrappedProject": "../../ClassicLibrary.DAL/ClassicLibrary.DAL.csproj",
+      "bin": {
+        "assembly": "../../ClassicLibrary.DAL/obj/{configuration}/ClassicLibrary.DAL.dll",
+        "pdb": "../../ClassicLibrary.DAL/obj/{configuration}/ClassicLibrary.DAL.pdb"
+      },
+      "dependencies": {
+        "EntityFramework": "6.1.3",
+        "Microsoft.AspNet.Identity.Core": "2.2.1",
+        "Microsoft.AspNet.Identity.EntityFramework": "2.2.1",
+        "Newtonsoft.Json": "7.0.1"
+      }
+    }
+  }
+}

@@ -1,7 +1,7 @@
 ﻿<h2>Insert new Book</h2>
 
 <div class="row">
-    <form class="form-group">
+    <form class="form-group" ng-submit="save()">
         <div class="form-horizontal">
             <hr />
             <div class="form-group col-md-6">
@@ -31,16 +31,15 @@
             </div>
 
             <div class="form-group col-md-10">
-                <button type="submit" value="save()" class="btn btn-primary"><span class="glyphicon glyphicon-save"></span>Save</button>
+                <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-save"></span>  Save</button>
             </div>
         </div>
     </form>
 </div>
 
-<div class="row">   
-    
-    <button class="btn  btn-success"><a href="#">Main</a></button>
-  
+<div class="row">       
+    <pre class="label label-success" ng-show="{{added}}">Added {{booksCount}} book(s)</pre>
+    <a href="#" class="btn  btn-success">Mains </a>
 </div>
 
 

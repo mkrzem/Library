@@ -13,4 +13,3 @@ C:\TestRepos\ClassicLibrary\ClassicLibrary.DAL\bin\Debug\Microsoft.AspNet.Identi
 C:\TestRepos\ClassicLibrary\ClassicLibrary.DAL\bin\Debug\Newtonsoft.Json.xml
 C:\TestRepos\ClassicLibrary\ClassicLibrary.DAL\obj\Debug\ClassicLibrary.DAL.dll
 C:\TestRepos\ClassicLibrary\ClassicLibrary.DAL\obj\Debug\ClassicLibrary.DAL.pdb
-C:\TestRepos\ClassicLibrary\ClassicLibrary.DAL\obj\Debug\ClassicLibrary.DAL.csprojResolveAssemblyReference.cache

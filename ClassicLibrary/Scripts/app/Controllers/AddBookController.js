@@ -1,7 +1,11 @@
-﻿app.controller('AddBookController', ['$scope', '$location', 'bookService',  function ($scope, $location, bookService) {
-    $scope.newBook= {
+﻿app.controller('AddBookController', ['$scope', '$location', 'bookService', function ($scope, $location, bookService) {
+    $scope.added = false;
+    $scope.booksCount = 0;
+
+    $scope.newBook = {
+        Id: 0,
         Name: '',
-        Genre: 'Drama',
+        Genre: '0',
         Author: '',
         Status: 'Available',
         Quantity: 1
@@ -14,6 +18,12 @@
     });
     
     $scope.save = function() {
-        var result = bookService.save($scope.newBook.Name, $scope.newBook.Genre, $scope.newBook.Author);        
+        var result = bookService.save($scope.newBook);
+        result.then(function (response) {
+            $scope.added = true;
+            $scope.booksCount += 1;
+        }, function (err) {
+            alert(err);
+        })
     };
 }]);

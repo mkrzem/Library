@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassicLibrary.Tests", "Cla
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassicLibrary.DAL", "ClassicLibrary.DAL\ClassicLibrary.DAL.csproj", "{8DFBF2B2-B69B-480D-8655-154D43BB07C0}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ClassicLibrary.API", "ClassicLibrary.API\ClassicLibrary.API.xproj", "{0E931FB2-1F2C-43DF-B671-135DE9FB5953}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{8DFBF2B2-B69B-480D-8655-154D43BB07C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8DFBF2B2-B69B-480D-8655-154D43BB07C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8DFBF2B2-B69B-480D-8655-154D43BB07C0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0E931FB2-1F2C-43DF-B671-135DE9FB5953}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0E931FB2-1F2C-43DF-B671-135DE9FB5953}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0E931FB2-1F2C-43DF-B671-135DE9FB5953}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0E931FB2-1F2C-43DF-B671-135DE9FB5953}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

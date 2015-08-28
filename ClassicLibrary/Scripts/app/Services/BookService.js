@@ -25,8 +25,25 @@
             return deffered.promise;
         }
 
-        function saveBook() {
-            
+        function saveBook(newBook) {
+            var deffered = $q.defer();
+
+            $http.post('api/books', {
+                Id: newBook.Id,
+                Name: newBook.Name,
+                Genre: newBook.Genre,
+                Author: newBook.Author,
+                Status: newBook.Status,
+                Quantity: newBook.Quantity
+            })
+            .success(function (response) {
+                deffered.resolve(response);
+            })
+            .error(function (err) {
+                deffered.reject(err)
+            });
+
+            return deffered.promise;
         }
     };
 })();

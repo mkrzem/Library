@@ -13,6 +13,10 @@ namespace ClassicLibrary
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            //routes.MapRoute(
+            //    name: "DefaultApi",
+            //    url: "api/{controller}/{action}");
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
