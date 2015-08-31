@@ -34,3 +34,12 @@ textarea {
         padding: 10px 15px;
     }
 }
+
+.error {
+    color:#e10e0e;
+}
+
+.row > .body-content > .addBookForm {
+    padding-left: 15px;
+    padding-right: 15px;
+}

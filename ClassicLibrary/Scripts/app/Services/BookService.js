@@ -6,7 +6,8 @@
     function service($http, $q) {
         var service = {
             genres: getGenres,
-            save: saveBook
+            save: saveBook,
+            books: getBooks
         };
 
         return service;
@@ -14,7 +15,7 @@
         function getGenres() {
             var deffered = $q.defer();
 
-            $http.get('home/getgenres')
+            $http.get('api/bookgenre')
                 .success(function (response) {
                     deffered.resolve(response);
                 })
@@ -42,6 +43,20 @@
             .error(function (err) {
                 deffered.reject(err)
             });
+
+            return deffered.promise;
+        }
+
+        function getBooks() {
+            var deffered = $q.defer();
+
+            $http.get('api/books')
+                .success(function (response) {
+                    deffered.resolve(response);
+                })
+                .error(function (err) {
+                    deffered.reject(response);
+                });
 
             return deffered.promise;
         }

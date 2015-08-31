@@ -208,7 +208,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Api\Controllers\BookGenreController.cs" />
     <Compile Include="Api\Controllers\BooksController.cs" />
+    <Compile Include="Api\Controllers\BorrowController.cs" />
     <Compile Include="Api\Controllers\DefaultController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -274,6 +276,7 @@
     <Content Include="Scripts\app\Controllers\HomeController.js" />
     <Content Include="Scripts\angular\angular.min.js.map" />
     <Content Include="Scripts\app\Services\BookService.js" />
+    <Content Include="Scripts\app\Services\RentService.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\errors.json" />
@@ -1083,7 +1086,7 @@
     </Content>
     <Content Include="Scripts\version.json" />
     <Content Include="Templates\Add.html" />
-    <Content Include="Templates\BookList.html" />
+    <Content Include="Templates\BooksList.html" />
     <Content Include="Templates\Web.config">
       <SubType>Designer</SubType>
     </Content>

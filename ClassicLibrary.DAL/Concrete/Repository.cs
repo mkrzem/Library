@@ -60,7 +60,7 @@ namespace ClassicLibrary.DAL.Concrete
         {
             IQueryable<TEntity> query = _dbSet;
 
-            if (query != null)
+            if (filter != null)
             {
                 query = query.Where(filter);
             }

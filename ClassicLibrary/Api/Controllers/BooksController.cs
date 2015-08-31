@@ -1,10 +1,9 @@
 ﻿using ClassicLibrary.DAL.Abstract;
 using ClassicLibrary.DAL.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using Newtonsoft.Json;
 using System.Net;
 using System.Net.Http;
+using System.Text;
 using System.Web.Http;
 
 namespace ClassicLibrary.Api.Controllers
@@ -18,18 +17,28 @@ namespace ClassicLibrary.Api.Controllers
         }
 
         [HttpGet]
-        public string Get()
+        public HttpResponseMessage Get()
         {
-            return "";
+            string result = JsonConvert.SerializeObject(service.Books.Get());
+            return new HttpResponseMessage() { Content = new StringContent(result, Encoding.UTF8, "application/json") };
         }
 
         [HttpPost]
-        public void Post(Book book)
+        public HttpResponseMessage Post(Book book)
         {
+            var response = new HttpResponseMessage();
             if (ModelState.IsValid)
             {
                 service.Books.Insert(book);
+                service.Save();
             }
+            else
+            {
+                response.StatusCode = HttpStatusCode.Conflict;
+                response.Content = new StringContent("Invalid data", Encoding.UTF8, "text/plain");
+            }
+
+            return response;
         }
     }
 }

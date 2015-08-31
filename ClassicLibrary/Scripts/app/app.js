@@ -8,13 +8,16 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
     $routeProvider
         .when('/Books', {
             controller: 'HomeController',
-            templateUrl: '/Templates/BookList.html'
+            templateUrl: '/Templates/BooksList.html'
         })
         .when('/AddBook', {
             controller: 'AddBookController',
             templateUrl: '/Templates/Add.html'
         })
-       // .when('/YourBooks')
+        //.when('/MyBooks', {
+        //    controller: 'BooksListController',
+        //    templateUrl: '/Templates'
+        //})
         .otherwise({
             redirectTo: '/'
         });

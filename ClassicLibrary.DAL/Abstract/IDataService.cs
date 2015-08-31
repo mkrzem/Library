@@ -13,6 +13,7 @@ namespace ClassicLibrary.DAL.Abstract
         Repository<Book> Books { get; }
         Repository<BookQueue> QueuedBooks { get; }
         Repository<BorrowedBook> BorrowedBooks { get; }
+        Repository<ApplicationUser> Users { get; }
         void Save();
 
     }

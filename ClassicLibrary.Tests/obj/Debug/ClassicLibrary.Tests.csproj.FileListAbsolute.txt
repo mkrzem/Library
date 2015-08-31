@@ -74,3 +74,4 @@ C:\TestRepos\ClassicLibrary\ClassicLibrary.Tests\bin\Debug\Microsoft.Practices.S
 C:\TestRepos\ClassicLibrary\ClassicLibrary.Tests\obj\Debug\ClassicLibrary.Tests.csprojResolveAssemblyReference.cache
 C:\TestRepos\ClassicLibrary\ClassicLibrary.Tests\obj\Debug\ClassicLibrary.Tests.dll
 C:\TestRepos\ClassicLibrary\ClassicLibrary.Tests\obj\Debug\ClassicLibrary.Tests.pdb
+C:\TestRepos\ClassicLibrary\ClassicLibrary.Tests\bin\Debug\Unity.WebApi.dll

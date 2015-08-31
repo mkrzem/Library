@@ -15,10 +15,24 @@ namespace ClassicLibrary.DAL.Concrete
         private Repository<Book> books;
         private Repository<BookQueue> queuedBooks;
         private Repository<BorrowedBook> borrowedBooks;
+        private Repository<ApplicationUser> users;
 
         public UnitOfWork(ILibraryDbContext context)
         {
             this.context = context;
+        }
+
+        public Repository<ApplicationUser> Users
+        {
+            get
+            {
+                if (users == null)
+                {
+                    users = new Repository<ApplicationUser>(context);
+                }
+
+                return users;
+            }
         }
         public Repository<Book> Books
         {

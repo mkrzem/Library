@@ -1,0 +1,30 @@
+﻿<div class="content">
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Details</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tr ng-repeat="book in books">
+            <td>
+                <div class="details">
+                    <strong class="text-primary">Title:</strong> <label class="text-info">{{book.Name}}</label><br />
+                    <strong class="text-primary">Author:</strong> <label class="text-info">{{book.Author}}</label><br />
+                    <strong class="text-primary">Genre:</strong> <label class="text-info">{{book.Genre}}</label>
+                </div>
+            </td>
+            <td align="center">
+                <div ng-show="book.Quantity > book.Queued && book.Status === 'Available'">
+                    <label class="alert alert-success" >Available</label>
+                    <button class="btn btn-success" ng-click="reserveBook(book)">Borrow Book</button>
+
+                </div>
+                <div ng-show="book.Quantity <= book.Queued book.Status === 'Available'">
+                    <label class="alert alert-danger" >All Borrowed!</label>
+                    <button class="btn btn-primary" ng-click="reserveBook(book)">Queue Book</button>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>

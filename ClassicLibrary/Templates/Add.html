@@ -1,45 +1,61 @@
 ﻿<h2>Insert new Book</h2>
 
-<div class="row">
-    <form class="form-group" ng-submit="save()">
+<div class="row body-content addBookForm">
+    <form name="addBookForm" novalidate class="form-group">
         <div class="form-horizontal">
             <hr />
-            <div class="form-group col-md-6">
-                <label for="#name" class="control-label">Name</label>
-                <input class="form-control" id="#name" type="text" ng-model="newBook.Name" />
-            </div>
+            <div class="row container">
+                <div class="form-group col-md-6">
+                    <label for="#name" class="control-label">Name</label>
+                    <input class="form-control" id="#name" name="name" type="text" ng-model="newBook.Name" required />
+                    <div class="error-container" ng-show="addBookForm.name.$invalid && submitted">
+                        <small class="error">Name is required</small>
+                    </div>
+                </div>
 
-            <div class="form-group col-md-6">
-                <label for="#genre" class="control-label">Genre</label>
-                <select id="#genre" class="form-control" ng-model="newBook.Genre">
-                    <option ng-repeat="genre in genres" value="{{genre.Value}}">{{genre.Name}}</option>
-                </select>
+                <div class="form-group col-md-6">
+                    <label for="#genre" class="control-label">Genre</label>
+                    <select id="#genre" class="form-control" ng-model="newBook.Genre" required>
+                        <option ng-repeat="genre in genres" value="{{genre.Value}}">{{genre.Name}}</option>
+                    </select>
+                </div>
             </div>
+            <div class="row container">
+                <div class="form-group col-md-6">
+                    <label for="#author" class="control-label">Author</label>
+                    <input id="#author" class="form-control" name="author" type="text" ng-model="newBook.Author" required />
+                    <div class="error-container" ng-show="addBookForm.author.$invalid && submitted">
+                        <small class="error">Author is required</small>
+                    </div>
+                </div>
 
-            <div class="form-group col-md-6">
-                <label for="#author" class="control-label">Author</label>
-                <input id="#author" class="form-control" type="text" ng-model="newBook.Author" />
-            </div>
+                <div class="col-md-6">
+                    <input id="status" type="hidden" />
+                </div>
 
-            <div class="col-md-6">
-                <input id="status" type="hidden" />
-            </div>
-
-            <div class="form-group col-md-6">
-                <label for="#quantity" class="control-label">Quantity</label>
-                <input id="quantity" class="form-control" type="number" ng-model="newBook.Quantity" />
+                <div class="form-group col-md-6">
+                    <label for="#quantity" class="control-label">Quantity</label>
+                    <input id="quantity" class="form-control" name="quantity" type="number" min="1" ng-model="newBook.Quantity" required />
+                    <div class="error-container" ng-show="addBookForm.quantity.$error.min && submitted">
+                        <small class="error">Quantity must be greater than 0</small>
+                    </div>
+                </div>
             </div>
 
             <div class="form-group col-md-10">
-                <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-save"></span>  Save</button>
+                <button type="submit" ng-click="save(addBookForm)" class="btn btn-primary">
+                    <span class="glyphicon glyphicon-save"></span>  Save
+                </button>
             </div>
         </div>
     </form>
 </div>
-
-<div class="row">       
-    <pre class="label label-success" ng-show="{{added}}">Added {{booksCount}} book(s)</pre>
-    <a href="#" class="btn  btn-success">Mains </a>
+<hr/>
+<div class="row body-content">       
+    <div class="alert alert-success" ng-show="added">Book added successfully.</div>
+    <pre class="alert alert-danger" ng-show="failed">{{error}}</pre>
+    <a href="#/Books" class="btn  btn-success">Main </a>
+    <button ng-click="toggle()" class="btn btn-default">Toggle</button>
 </div>
 
 

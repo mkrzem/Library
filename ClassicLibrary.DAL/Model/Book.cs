@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
@@ -28,11 +30,13 @@ namespace ClassicLibrary.DAL.Model
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        [JsonConverter(typeof(StringEnumConverter))]
         public BookGenre Genre { get; set; }
         public string Author { get; set; }        
         public BookStatus Status { get; set; }
         [DefaultValue(value: 1)]
         public int Quantity { get; set; }
+        public int Queued { get; set; }
     }
 }
     
