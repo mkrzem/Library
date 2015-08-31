@@ -1,26 +1,27 @@
-﻿app.factory('rentService', ['$http', '$q', function ($http, $q) {
+﻿app.factory('rentService', ['$http', '$q', '$resource', function ($http, $q, $resource) {
     var service = {
-        borrow: borrowBook,
-        queue: queueBook
+        borrow: $resource('api/borrow/:id', { id: '@id' })
     };
 
     return service;
 
-    function borrowBook(id) {
-        var deffered = $q.defer();
+    
+    //function borrowBook(id) {
+    //    $resource('api/borrow/:id',)
+    //    var deffered = $q.defer();
 
-        $http.post('api/borrow', {
-            Id: id
-        })
-        .success(function (response) {
-            deffered.resolve(response);
-        })
-        .error(function (err) {
-            deffered.reject(err);
-        });
+    //    $http.post('api/borrow/:id', 
+    //        id
+    //    )
+    //    .success(function (response) {
+    //        deffered.resolve(response);
+    //    })
+    //    .error(function (err) {
+    //        deffered.reject(err);
+    //    });
 
-        return deffered.promise;
-    };
+    //    return deffered.promise;
+    //};
 
     //function queueBook(id) {
     //    var deffered = $q.defer();

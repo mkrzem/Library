@@ -15,12 +15,12 @@
                 </div>
             </td>
             <td align="center">
-                <div ng-show="book.Quantity > book.Queued && book.Status === 'Available'">
+                <div ng-show="book.Quantity > book.Queued && book.Status == 0">
                     <label class="alert alert-success" >Available</label>
                     <button class="btn btn-success" ng-click="reserveBook(book)">Borrow Book</button>
 
                 </div>
-                <div ng-show="book.Quantity <= book.Queued book.Status === 'Available'">
+                <div ng-show="book.Quantity <= book.Queued && book.Status == 0">
                     <label class="alert alert-danger" >All Borrowed!</label>
                     <button class="btn btn-primary" ng-click="reserveBook(book)">Queue Book</button>
                 </div>

@@ -37,6 +37,7 @@ namespace ClassicLibrary.DAL.Model
         [DefaultValue(value: 1)]
         public int Quantity { get; set; }
         public int Queued { get; set; }
+        public DateTime ReleaseDate { get; set; }
     }
 }
     

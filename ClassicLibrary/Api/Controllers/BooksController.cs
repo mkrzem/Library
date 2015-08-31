@@ -8,6 +8,7 @@ using System.Web.Http;
 
 namespace ClassicLibrary.Api.Controllers
 {
+    [Authorize]
     public class BooksController : ApiController
     {
         private IDataService service;

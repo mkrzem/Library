@@ -275,7 +275,9 @@
     <Content Include="Scripts\app\Controllers\AddBookController.js" />
     <Content Include="Scripts\app\Controllers\HomeController.js" />
     <Content Include="Scripts\angular\angular.min.js.map" />
+    <Content Include="Scripts\app\Interceptors\AuthInterceptor.js" />
     <Content Include="Scripts\app\Services\BookService.js" />
+    <Content Include="Scripts\app\Services\localStorage.js" />
     <Content Include="Scripts\app\Services\RentService.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />

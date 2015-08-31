@@ -5,6 +5,8 @@
     });
 
     $scope.reserveBook = function (book) {        
-        var promise = rentService.borrow(book.Id);
+        var rentResource = new rentService.borrow();
+        rentResource.id = book.Id;
+        rentResource.$save();
     };
 }])

@@ -1,10 +1,10 @@
-﻿var app = angular.module('LibraryApp', ['ngRoute']);
+﻿var app = angular.module('LibraryApp', ['ngRoute', 'ngResource']);
 
 app.controller('MainController', ['$scope', '$location', function ($scope, $location) {
     $scope.$location = $location;
 }]);
     
-app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
+app.config(['$routeProvider', '$locationProvider', '$httpProvider', function ($routeProvider, $locationProvider, $httpProvider) {
     $routeProvider
         .when('/Books', {
             controller: 'HomeController',
@@ -18,12 +18,17 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
         //    controller: 'BooksListController',
         //    templateUrl: '/Templates'
         //})
+        .when('/Login', {
+            templateUrl: '/Account/Login/:blabla'
+        })
         .otherwise({
-            redirectTo: '/'
+            redirectTo: '/Books'
         });
 
     //$locationProvider.html5Mode({
     //    enable: true,
     //    requireBase: false
     //});
+
+    $httpProvider.interceptors.push('authInterceptor');
 }]);

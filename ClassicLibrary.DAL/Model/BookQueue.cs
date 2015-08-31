@@ -12,5 +12,6 @@ namespace ClassicLibrary.DAL.Model
         public Book AwaitedBook { get; set; }
         public ApplicationUser AwaitingReader { get; set; }
         public int Position { get; set; }
+        public DateTime ReleaseDate { get; set; }
     }
 }
