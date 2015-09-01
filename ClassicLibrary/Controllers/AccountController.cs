@@ -10,6 +10,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using ClassicLibrary.Models;
 using ClassicLibrary.DAL.Model;
+using System.Net.Http;
 
 namespace ClassicLibrary.Controllers
 {
@@ -68,6 +69,7 @@ namespace ClassicLibrary.Controllers
         //
         // GET: /Account/Login
         [AllowAnonymous]
+        [Route("#/Account/Login")]
         public ActionResult Login(string returnUrl)
         {
             ViewBag.ReturnUrl = returnUrl;

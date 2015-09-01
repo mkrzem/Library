@@ -1,0 +1,18 @@
+﻿<div>
+    <h2>Log in.</h2>
+    <form class="form-group" name="loginForm">
+        <div>
+            <label for="userName">User Name</label>
+            <input class="form-control" type="text" id="userName" placeholder="User Name" ng-model="loginData.userName" required/>
+        </div>
+        <br />
+        <div>
+            <label for="password">Password</label>
+            <input class="form-control" type="password" id="password" placeholder="User Name" ng-model="loginData.password" required/>
+        </div>
+        <br />
+        <input type="submit" ng-click="login(loginForm)" class="btn btn-default" value="Log in" />
+        <br />
+        <h4 class="alert alert-danger" ng-show="message !== ''">{{message}}</h4>
+    </form>
+</div>

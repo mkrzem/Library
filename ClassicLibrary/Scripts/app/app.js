@@ -19,7 +19,11 @@ app.config(['$routeProvider', '$locationProvider', '$httpProvider', function ($r
         //    templateUrl: '/Templates'
         //})
         .when('/Login', {
-            templateUrl: '/Account/Login/:blabla'
+            templateUrl: '/Templates/Login.html',
+            controller: 'LoginController'
+        })
+        .when('/Register', {
+            templateUrl: '/Templates/Register.html'
         })
         .otherwise({
             redirectTo: '/Books'

@@ -11,15 +11,14 @@
         var authorizationData = $localStorage.get('authorizationData');
 
         if (authorizationData) {
-            config.headers.Authorization = 'Bearer' + authorizationData.token;
+            config.headers.Authorization = 'Bearer ' + authorizationData.token;
         }
 
         return config;
     };
 
     function response(response) {
-        if (response.status === 401) {            
-            $routeParams.returnUrl = $location.path();
+        if (response.status === 401) {        
             $location.path('/Login');
         }
         return $q.reject(response);

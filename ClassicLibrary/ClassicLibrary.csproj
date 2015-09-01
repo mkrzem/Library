@@ -234,6 +234,7 @@
     <Compile Include="Models\MeViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
+    <Compile Include="Providers\BasicOAuthProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -275,7 +276,9 @@
     <Content Include="Scripts\app\Controllers\AddBookController.js" />
     <Content Include="Scripts\app\Controllers\HomeController.js" />
     <Content Include="Scripts\angular\angular.min.js.map" />
+    <Content Include="Scripts\app\Controllers\LoginController.js" />
     <Content Include="Scripts\app\Interceptors\AuthInterceptor.js" />
+    <Content Include="Scripts\app\Services\AuthService.js" />
     <Content Include="Scripts\app\Services\BookService.js" />
     <Content Include="Scripts\app\Services\localStorage.js" />
     <Content Include="Scripts\app\Services\RentService.js" />
@@ -1049,6 +1052,7 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Templates\Login.html" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
     <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
