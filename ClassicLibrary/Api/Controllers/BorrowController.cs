@@ -35,7 +35,7 @@ namespace ClassicLibrary.Api.Controllers
 
             if (book.Quantity > book.Queued)
             {
-                BorrowedBook borrowedBook = new BorrowedBook() { Book = book, User = currentUser, ReturnDate = DateTime.Today.AddMonths(1) };
+                BorrowedBook borrowedBook = new BorrowedBook() { BookId = book.Id, UserId = currentUser.Id, ReturnDate = DateTime.Today.AddMonths(1) };
                 book.Queued += 1;
                 service.BorrowedBooks.Insert(borrowedBook);
                 service.Books.Update(book);

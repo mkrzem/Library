@@ -1,16 +1,11 @@
-﻿app.factory('authService', ['$http', '$q', '$localStorage', function ($http, $q, $localStorage) {
-    var service = {
-        login: login,
-        register: register,
-        authentication: auth
-    };
+﻿app.factory('authService', ['$http', '$q', '$localStorage', function ($http, $q, $localStorage) {   
+
+    var service = {};
 
     var auth = {
         isAuth: false,
         userName: ""
-    };
-
-    return service;    
+    };      
 
     function login(loginData) {
         var data = "grant_type=password&username=" + loginData.userName + "&password=" + loginData.password;
@@ -41,4 +36,20 @@
         auth.isAuth = false;
         auth.userName = "";
     };
+
+    function getAuthData() {
+        var authData = $localStorage.get('authorizationData');
+        if (authData) {
+            auth.isAuth = true;
+            auth.userName = authData.userName;
+        }
+    };
+
+    service.login = login;
+    service.register = register
+    service.authentication = auth;
+    service.logout = logout;
+    service.fillAuthData = getAuthData;
+
+    return service;
 }]);

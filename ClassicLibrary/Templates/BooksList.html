@@ -1,4 +1,6 @@
-﻿<div class="content">
+﻿<h3>Available books</h3>
+<label ng-hide="authentication.isAuth" class="alert alert-info">You have to Log in to borrow books.</label>
+<div class="content">
     <table class="table table-bordered table-hover">
         <thead>
             <tr>
@@ -7,7 +9,7 @@
             </tr>
         </thead>
         <tr ng-repeat="book in books">
-            <td>
+            <td >
                 <div class="details">
                     <strong class="text-primary">Title:</strong> <label class="text-info">{{book.Name}}</label><br />
                     <strong class="text-primary">Author:</strong> <label class="text-info">{{book.Author}}</label><br />
@@ -15,15 +17,17 @@
                 </div>
             </td>
             <td align="center">
-                <div ng-show="book.Quantity > book.Queued && book.Status == 0">
-                    <label class="alert alert-success" >Available</label>
-                    <button class="btn btn-success" ng-click="reserveBook(book)">Borrow Book</button>
+                <section ng-show="authentication.isAuth">
+                    <div ng-show="book.Quantity > book.Queued && book.Status == 0">
+                        <label class="alert alert-success" for="reserve">Available</label>
+                        <button class="btn btn-success" id="reserve" ng-click="reserveBook(book)">Borrow Book</button>
 
-                </div>
-                <div ng-show="book.Quantity <= book.Queued && book.Status == 0">
-                    <label class="alert alert-danger" >All Borrowed!</label>
-                    <button class="btn btn-primary" ng-click="reserveBook(book)">Queue Book</button>
-                </div>
+                    </div>
+                    <div ng-show="book.Quantity <= book.Queued && book.Status == 0">
+                        <label class="alert alert-danger">All Borrowed!</label>
+                        <button class="btn btn-primary" ng-click="reserveBook(book)">Queue Book</button>
+                    </div>
+                </section>                
             </td>
         </tr>
     </table>

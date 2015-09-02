@@ -212,6 +212,7 @@
     <Compile Include="Api\Controllers\BooksController.cs" />
     <Compile Include="Api\Controllers\BorrowController.cs" />
     <Compile Include="Api\Controllers\DefaultController.cs" />
+    <Compile Include="Api\Controllers\MyBooksController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -227,6 +228,10 @@
     <Compile Include="Controllers\MeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201509020903273_CorrectedReferences.cs" />
+    <Compile Include="Migrations\201509020903273_CorrectedReferences.Designer.cs">
+      <DependentUpon>201509020903273_CorrectedReferences.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -277,6 +282,8 @@
     <Content Include="Scripts\app\Controllers\HomeController.js" />
     <Content Include="Scripts\angular\angular.min.js.map" />
     <Content Include="Scripts\app\Controllers\LoginController.js" />
+    <Content Include="Scripts\app\Controllers\MainController.js" />
+    <Content Include="Scripts\app\Controllers\MyBooksController.js" />
     <Content Include="Scripts\app\Interceptors\AuthInterceptor.js" />
     <Content Include="Scripts\app\Services\AuthService.js" />
     <Content Include="Scripts\app\Services\BookService.js" />
@@ -1053,6 +1060,7 @@
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Templates\Login.html" />
+    <Content Include="Templates\MyBooks.html" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
     <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
@@ -1112,6 +1120,11 @@
       <Project>{8dfbf2b2-b69b-480d-8655-154d43bb07c0}</Project>
       <Name>ClassicLibrary.DAL</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201509020903273_CorrectedReferences.resx">
+      <DependentUpon>201509020903273_CorrectedReferences.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -7,7 +7,8 @@
         var service = {
             genres: getGenres,
             save: saveBook,
-            books: getBooks
+            books: getBooks,
+            myBooks: getMyBooks
         };
 
         return service;
@@ -24,7 +25,7 @@
                 });
 
             return deffered.promise;
-        }
+        };
 
         function saveBook(newBook) {
             var deffered = $q.defer();
@@ -45,7 +46,7 @@
             });
 
             return deffered.promise;
-        }
+        };
 
         function getBooks() {
             var deffered = $q.defer();
@@ -59,6 +60,20 @@
                 });
 
             return deffered.promise;
-        }
+        };
+
+        function getMyBooks() {
+            var deffered = $q.defer();
+
+            $http.get('api/MyBooks')
+                .success(function (response) {
+                    deffered.resolve(response);
+                })
+                .error(function (err) {
+                    deffered.reject(err);
+                });
+
+            return deffered.promise;
+        };
     };
 })();

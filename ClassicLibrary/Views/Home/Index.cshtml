@@ -2,10 +2,7 @@
     <div ng-view class="col-md-9"></div>
     <div class="col-md-3">
         <ul class="nav nav-pills nav-stacked navbar-inverse">
-            @if (User.Identity.IsAuthenticated)
-            {
-                <li class="btn"><a href="#/MyBooks" >My Books</a></li>
-            }
+            <li class="btn"><a href="#/MyBooks">My Books</a></li>
         </ul>
     </div>
 </div>

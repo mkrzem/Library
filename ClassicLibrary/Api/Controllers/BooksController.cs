@@ -5,10 +5,11 @@ using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Web.Http;
+using System.Linq;
+using System;
 
 namespace ClassicLibrary.Api.Controllers
-{
-    [Authorize]
+{    
     public class BooksController : ApiController
     {
         private IDataService service;
@@ -23,13 +24,14 @@ namespace ClassicLibrary.Api.Controllers
             string result = JsonConvert.SerializeObject(service.Books.Get());
             return new HttpResponseMessage() { Content = new StringContent(result, Encoding.UTF8, "application/json") };
         }
-
+        
         [HttpPost]
         public HttpResponseMessage Post(Book book)
         {
             var response = new HttpResponseMessage();
             if (ModelState.IsValid)
             {
+                book.ReleaseDate = DateTime.Now.AddMonths(-1);
                 service.Books.Insert(book);
                 service.Save();
             }

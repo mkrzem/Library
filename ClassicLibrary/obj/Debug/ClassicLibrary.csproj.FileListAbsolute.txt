@@ -90,3 +90,5 @@ C:\TestRepos\ClassicLibrary\ClassicLibrary\obj\Debug\ClassicLibrary.csprojResolv
 C:\TestRepos\ClassicLibrary\ClassicLibrary\obj\Debug\ClassicLibrary.dll
 C:\TestRepos\ClassicLibrary\ClassicLibrary\obj\Debug\ClassicLibrary.pdb
 C:\TestRepos\ClassicLibrary\ClassicLibrary\bin\Unity.WebApi.dll
+C:\TestRepos\ClassicLibrary\ClassicLibrary\obj\Debug\ClassicLibrary.Migrations.CorrectedReferences.resources
+C:\TestRepos\ClassicLibrary\ClassicLibrary\obj\Debug\ClassicLibrary.csproj.GenerateResource.Cache

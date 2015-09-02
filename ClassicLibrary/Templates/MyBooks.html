@@ -1,0 +1,8 @@
+﻿<h3 class="page-header">My Books</h3>
+<div class="panel panel-primary" ng-repeat="book in myBooks">
+    <div class="panel-heading">Title: <strong>"{{book.Name}}"</strong></div>
+    <div class="panel-body row">
+        <div class="col-md-9"><strong>Author:</strong> {{book.Author}}; <strong>Genre:</strong> {{book.Genre}}</div>
+        <div class="col-md-3"><button class="btn btn-primary" ng-click="return()">Return</button></div>
+    </div>
+</div>

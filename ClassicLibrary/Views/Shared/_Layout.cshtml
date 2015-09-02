@@ -18,31 +18,29 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <span class="navbar-brand"><a href="#">Library</a></span>
-                @if (Request.IsAuthenticated && User.IsInRole("Admin"))
-            {
-                    <div class="dropdown navbar-header">
-                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                            Admin Stuff
-                            <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                            <li><a href="#/AddBook">Add Book</a> </li> @*@Html.ActionLink("Add Book", "Add", "Admin")</li>*@
-                            <li>@Html.ActionLink("Manage Users", "Users", "Admin")</li>
-
-                        </ul>
-                    </div>
-                }
+                <span class="navbar-brand"><a href="#/Books">Library</a></span>
+                <div class="dropdown navbar-header" ng-show="authentication.isAuth">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Admin Stuff
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li><a href="#/AddBook">Add Book</a> </li>
+                        <li>@Html.ActionLink("Manage Users", "Users", "Admin")</li>
+                    </ul>
+                </div>
             </div>
             
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav navbar-right">
                     
-                    <li></li>
+                    <li ng-show="authentication.isAuth" ><a href="">Hello {{authentication.userName}}!</a></li>
+                    <li ng-show="authentication.isAuth" ng-click="logout()"><a href="">Log out</a></li>
+                    <li ng-show="!authentication.isAuth"><a href="#/Login" >Log in</a></li>
                     @*<li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
                     <li>@Html.ActionLink("API", "Index", "Help", new { area = "HelpPage" }, null)</li>*@
                 </ul>
-                @Html.Partial("_LoginPartial")
+                @*@Html.Partial("_LoginPartial")*@
             </div>
         </div>
     </div>

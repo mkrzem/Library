@@ -14,10 +14,10 @@ app.config(['$routeProvider', '$locationProvider', '$httpProvider', function ($r
             controller: 'AddBookController',
             templateUrl: '/Templates/Add.html'
         })
-        //.when('/MyBooks', {
-        //    controller: 'BooksListController',
-        //    templateUrl: '/Templates'
-        //})
+        .when('/MyBooks', {
+            controller: 'MyBooksController',
+            templateUrl: '/Templates/MyBooks.html'
+        })
         .when('/Login', {
             templateUrl: '/Templates/Login.html',
             controller: 'LoginController'
