@@ -9,13 +9,13 @@ app.directive("access", function () {
         restrict: 'A',
         scope: {
             accessType: '@',
-            ngClass: '='
         },
         controller: ['$scope', 'authService', '$attrs', function ($scope, authService, $attrs) {
             $scope.accessType = this.accessType;
-            $scope.ngClass = this.ngClass;
 
-            $scope.$watch(authService.authentication.isAuth, function () {
+            $scope.$watch(function () {
+                return authService.authentication.isAuth;
+            }, function () {
                 var visible = false;
                 if (authService.authentication.isAuth) {
                     visible = true;
