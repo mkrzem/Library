@@ -17,7 +17,7 @@
                 </div>
             </td>
             <td align="center">
-                <section ng-show="authentication.isAuth">
+                <section access access-type="Admin" ng-class="">
                     <div ng-show="book.Quantity > book.Queued && book.Status == 0">
                         <label class="alert alert-success" for="reserve">Available</label>
                         <button class="btn btn-success" id="reserve" ng-click="reserveBook(book)">Borrow Book</button>

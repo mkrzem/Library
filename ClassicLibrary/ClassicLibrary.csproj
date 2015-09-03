@@ -213,6 +213,7 @@
     <Compile Include="Api\Controllers\BorrowController.cs" />
     <Compile Include="Api\Controllers\DefaultController.cs" />
     <Compile Include="Api\Controllers\MyBooksController.cs" />
+    <Compile Include="Api\Controllers\UserInfoController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -284,6 +285,7 @@
     <Content Include="Scripts\app\Controllers\LoginController.js" />
     <Content Include="Scripts\app\Controllers\MainController.js" />
     <Content Include="Scripts\app\Controllers\MyBooksController.js" />
+    <Content Include="Scripts\app\Directives\AccessDirective.js" />
     <Content Include="Scripts\app\Interceptors\AuthInterceptor.js" />
     <Content Include="Scripts\app\Services\AuthService.js" />
     <Content Include="Scripts\app\Services\BookService.js" />

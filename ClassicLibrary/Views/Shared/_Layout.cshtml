@@ -19,7 +19,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <span class="navbar-brand"><a href="#/Books">Library</a></span>
-                <div class="dropdown navbar-header" ng-show="authentication.isAuth">
+                <div class="dropdown navbar-header" access access-type="Admin" >
                     <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                         Admin Stuff
                         <span class="caret"></span>
@@ -34,9 +34,9 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
                     
-                    <li ng-show="authentication.isAuth" ><a href="">Hello {{authentication.userName}}!</a></li>
-                    <li ng-show="authentication.isAuth" ng-click="logout()"><a href="">Log out</a></li>
-                    <li ng-show="!authentication.isAuth"><a href="#/Login" >Log in</a></li>
+                    <li access ng-class="Visible()"><a href="">Hello {{authentication.userName}}!</a></li>
+                    <li access ng-click="logout()" ng-class="Visible()"><a href="">Log out</a></li>
+                    <li !access><a href="#/Login" >Log in</a></li>
                     @*<li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
                     <li>@Html.ActionLink("API", "Index", "Help", new { area = "HelpPage" }, null)</li>*@
                 </ul>

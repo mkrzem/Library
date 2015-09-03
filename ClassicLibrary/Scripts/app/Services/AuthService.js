@@ -4,7 +4,8 @@
 
     var auth = {
         isAuth: false,
-        userName: ""
+        userName: "",
+        roles: []
     };      
 
     function login(loginData) {
@@ -13,10 +14,11 @@
 
         $http.post('/Token', data, { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } })
             .success(function (response) {
-                $localStorage.set('authorizationData', { token: response.access_token, userName: loginData.userName });
+                $localStorage.set('authorizationData', { token: response.access_token, userName: loginData.userName, roles: response.roles });
 
                 auth.isAuth = true;
                 auth.userName = loginData.userName;
+                auth.roles = response.roles.split(",", 10);
 
                 deffered.resolve(response);
             })
@@ -35,6 +37,7 @@
 
         auth.isAuth = false;
         auth.userName = "";
+        auth.roles = [];
     };
 
     function getAuthData() {
@@ -42,7 +45,12 @@
         if (authData) {
             auth.isAuth = true;
             auth.userName = authData.userName;
+            auth.roles = authData.roles;
         }
+    };
+
+    function isInRole(role) {
+        return auth.roles.indexOf(role) > -1;
     };
 
     service.login = login;
@@ -50,6 +58,7 @@
     service.authentication = auth;
     service.logout = logout;
     service.fillAuthData = getAuthData;
+    service.isInRole = isInRole;
 
     return service;
 }]);
