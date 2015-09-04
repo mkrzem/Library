@@ -1,4 +1,4 @@
-﻿app.factory('authService', ['$http', '$q', '$localStorage', function ($http, $q, $localStorage) {   
+﻿app.factory('authService', ['$http', '$q', '$localStorageService', function ($http, $q, $localStorageService) {   
 
     var service = {};
 
@@ -14,7 +14,7 @@
 
         $http.post('/Token', data, { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } })
             .success(function (response) {
-                $localStorage.set('authorizationData', { token: response.access_token, userName: loginData.userName, roles: response.roles });
+                $localStorageService.set('authorizationData', { token: response.access_token, userName: loginData.userName, roles: response.roles });
 
                 auth.isAuth = true;
                 auth.userName = loginData.userName;
@@ -33,7 +33,7 @@
     function register() {};
 
     function logout() {
-        $localStorage.remove('authorizationData');
+        $localStorageService.remove('authorizationData');
 
         auth.isAuth = false;
         auth.userName = "";
@@ -41,7 +41,7 @@
     };
 
     function getAuthData() {
-        var authData = $localStorage.get('authorizationData');
+        var authData = $localStorageService.get('authorizationData');
         if (authData) {
             auth.isAuth = true;
             auth.userName = authData.userName;

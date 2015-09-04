@@ -1,4 +1,4 @@
-﻿app.factory('authInterceptor', ['$q', '$location', '$localStorage', '$routeParams', function ($q, $location, $localStorage, $routeParams) {
+﻿app.factory('authInterceptor', ['$q', '$location', '$localStorageService', '$routeParams', function ($q, $location, $localStorageService, $routeParams) {
     var authInterceptorService = {
         request: request,
         responseError: response
@@ -8,7 +8,7 @@
 
     function request(config) {
         //config.headers = headers || {};        
-        var authorizationData = $localStorage.get('authorizationData');
+        var authorizationData = $localStorageService.get('authorizationData');
 
         if (authorizationData) {
             config.headers.Authorization = 'Bearer ' + authorizationData.token;

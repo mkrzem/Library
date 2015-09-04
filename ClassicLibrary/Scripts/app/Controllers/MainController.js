@@ -1,4 +1,4 @@
-﻿app.controller('MainController', ['$scope', '$location', 'authService', function ($scope, $location, authService) {    
+﻿app.controller('MainController', ['$scope', '$location', 'authService', 'dialogBox', function ($scope, $location, authService, dialogBox) {    
 
     $scope.authentication = authService.authentication;
 
@@ -7,5 +7,8 @@
         $location.path('/Books');
     };
 
+    $scope.click = function () {
+        dialogBox.show();
+    }
     
 }]);

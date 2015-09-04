@@ -1,4 +1,4 @@
-﻿app.factory('$localStorage', ['$window', function ($window) {
+﻿app.factory('$localStorageService', ['$window', function ($window) {
     return {
         get: function (key) {
             return JSON.parse($window.localStorage.getItem(key));

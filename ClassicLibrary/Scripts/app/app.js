@@ -1,4 +1,4 @@
-﻿var app = angular.module('LibraryApp', ['ngRoute', 'ngResource']);
+﻿var app = angular.module('LibraryApp', ['ngRoute', 'ngResource', 'ui.bootstrap']);
 
 app.controller('MainController', ['$scope', '$location', function ($scope, $location) {
     $scope.$location = $location;

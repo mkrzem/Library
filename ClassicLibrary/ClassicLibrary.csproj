@@ -250,9 +250,14 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\ui-bootstrap-csp.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.min.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap.min.js" />
     <Content Include="Scripts\angular\angular-animate.js" />
     <Content Include="Scripts\angular\angular-animate.min.js" />
     <Content Include="Scripts\angular\angular-aria.js" />
@@ -289,7 +294,8 @@
     <Content Include="Scripts\app\Interceptors\AuthInterceptor.js" />
     <Content Include="Scripts\app\Services\AuthService.js" />
     <Content Include="Scripts\app\Services\BookService.js" />
-    <Content Include="Scripts\app\Services\localStorage.js" />
+    <Content Include="Scripts\app\Services\DialogBoxService.js" />
+    <Content Include="Scripts\app\Services\localStorageService.js" />
     <Content Include="Scripts\app\Services\RentService.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -1061,6 +1067,7 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Templates\Dialogs\Info.html" />
     <Content Include="Templates\Login.html" />
     <Content Include="Templates\MyBooks.html" />
     <Content Include="Views\_ViewStart.cshtml" />
