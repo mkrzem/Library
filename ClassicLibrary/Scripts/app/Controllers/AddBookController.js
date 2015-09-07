@@ -1,4 +1,4 @@
-﻿app.controller('AddBookController', ['$scope', '$location', 'bookService', function ($scope, $location, bookService) {
+﻿app.controller('AddBookController', ['$scope', '$location', 'bookService', 'dialogBox', function ($scope, $location, bookService, dialogBox) {
     $scope.added = false;
     $scope.failed = false;
     $scope.error = '';
@@ -31,10 +31,28 @@
 
                 $scope.submitted = false;
                 $scope.newBook = '';
+
+                config = {
+                    error: false,
+                    input: {
+                        message: response,
+                        title: 'Success'
+                    }
+                };
+                dialogBox.show(config);
             }, function (err) {
                 $scope.added = false;
                 $scope.error = err;
                 $scope.failed = true;
+
+                config = {
+                    error: true,
+                    input: {
+                        message: err
+                    }
+                }
+
+                dialogBox.show(config);
             });
         } else {
             $scope.submitted = true;

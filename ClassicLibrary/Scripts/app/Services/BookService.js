@@ -39,6 +39,7 @@
                 Quantity: newBook.Quantity
             })
             .success(function (response) {
+                response = 'Book "' + newBook.Name + '" added successfully.'
                 deffered.resolve(response);
             })
             .error(function (err) {

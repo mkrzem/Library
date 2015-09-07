@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Text;
 using System.Web.Http;
 
 namespace ClassicLibrary.Api.Controllers
@@ -48,7 +49,7 @@ namespace ClassicLibrary.Api.Controllers
 
             service.Save();
 
-            return new HttpResponseMessage() { StatusCode = HttpStatusCode.OK, Content = new StringContent("Book borrowed.") };
+            return new HttpResponseMessage() { StatusCode = HttpStatusCode.OK, Content = new StringContent("{\"result\":\"Book borrowed.\"}", Encoding.UTF8, "text/plain") };
         }
 
         [HttpPost]

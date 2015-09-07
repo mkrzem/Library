@@ -1,4 +1,4 @@
-﻿app.controller('MainController', ['$scope', '$location', 'authService', 'dialogBox', function ($scope, $location, authService, dialogBox) {    
+﻿app.controller('MainController', ['$scope', '$location', 'authService', 'dialogBox', '$modal', function ($scope, $location, authService, dialogBox, $modal) {    
 
     $scope.authentication = authService.authentication;
 
@@ -8,7 +8,18 @@
     };
 
     $scope.click = function () {
-        dialogBox.show();
+        config = {
+            //controller: function (message, title, input) {
+            //    this.message = message;
+            //    this.title = title;
+            //}
+            input: {
+                message: "Testing message input",
+                title: "Testin Header"
+            },
+            error: false
+        }
+        dialogBox.show(config);
     }
     
 }]);
