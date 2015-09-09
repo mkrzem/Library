@@ -1,5 +1,10 @@
-﻿app.controller('MyBooksController', ['$scope', 'bookService', function ($scope, bookService) {
-    bookService.myBooks().then(function (data) {
-        $scope.myBooks = data;
-    });
-}]);
+﻿(function() {
+    angular.module('LibraryApp')
+           .controller('MyBooksController', ['$scope', 'bookService', MyBooksController])
+    
+    function MyBooksController($scope, bookService) {
+        bookService.myBooks().then(function (data) {
+            $scope.myBooks = data;
+        });
+    };
+})();

@@ -12,17 +12,17 @@ namespace ClassicLibrary.DAL.Concrete
     {
         private bool disposed = false;
         private ILibraryDbContext context;
-        private Repository<Book> books;
-        private Repository<BookQueue> queuedBooks;
-        private Repository<BorrowedBook> borrowedBooks;
-        private Repository<ApplicationUser> users;
+        private IRepository<Book> books;
+        private IRepository<BookQueue> queuedBooks;
+        private IRepository<BorrowedBook> borrowedBooks;
+        private IRepository<ApplicationUser> users;
 
         public UnitOfWork(ILibraryDbContext context)
         {
             this.context = context;
         }
 
-        public Repository<ApplicationUser> Users
+        public IRepository<ApplicationUser> Users
         {
             get
             {
@@ -34,7 +34,7 @@ namespace ClassicLibrary.DAL.Concrete
                 return users;
             }
         }
-        public Repository<Book> Books
+        public IRepository<Book> Books
         {
             get
             {
@@ -47,7 +47,7 @@ namespace ClassicLibrary.DAL.Concrete
             }
         }
 
-        public Repository<BookQueue> QueuedBooks
+        public IRepository<BookQueue> QueuedBooks
         {
             get
             {
@@ -60,7 +60,7 @@ namespace ClassicLibrary.DAL.Concrete
             }
         }
 
-        public Repository<BorrowedBook> BorrowedBooks
+        public IRepository<BorrowedBook> BorrowedBooks
         {
             get
             {

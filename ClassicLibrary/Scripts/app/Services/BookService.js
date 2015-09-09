@@ -1,17 +1,9 @@
-﻿(function() {
-    app.factory('bookService', service);
+﻿(function () {
+    angular.module('LibraryApp')
+           .factory('bookService', ['$http', '$q', BookService]);
 
-    service.$inject = ['$http', '$q'];
-
-    function service($http, $q) {
-        var service = {
-            genres: getGenres,
-            save: saveBook,
-            books: getBooks,
-            myBooks: getMyBooks
-        };
-
-        return service;
+    function BookService($http, $q) {
+        bookService = {};
 
         function getGenres() {
             var deffered = $q.defer();
@@ -76,5 +68,11 @@
 
             return deffered.promise;
         };
+
+        bookService.genres = getGenres;
+        bookService.save = saveBook;
+        bookService.books = getBooks;
+        bookService.myBooks = getMyBooks;
+        return bookService;
     };
 })();

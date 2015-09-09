@@ -24,7 +24,13 @@ namespace ClassicLibrary.Api.Controllers
             string result = JsonConvert.SerializeObject(service.Books.Get());
             return new HttpResponseMessage() { Content = new StringContent(result, Encoding.UTF8, "application/json") };
         }
-        
+
+        public HttpResponseMessage Get(int id)
+        {
+            string result = JsonConvert.SerializeObject(service.Books.GetById(id));
+            return new HttpResponseMessage() { Content = new StringContent(result, Encoding.UTF8, "application/json") };
+        }
+
         [HttpPost]
         public HttpResponseMessage Post(Book book)
         {
@@ -34,11 +40,13 @@ namespace ClassicLibrary.Api.Controllers
                 book.ReleaseDate = DateTime.Now.AddMonths(-1);
                 service.Books.Insert(book);
                 service.Save();
+                response.StatusCode = HttpStatusCode.OK;
+                response.Content = new StringContent("Book added.", Encoding.UTF8, "text/plain");
             }
             else
             {
                 response.StatusCode = HttpStatusCode.Conflict;
-                response.Content = new StringContent("Invalid data", Encoding.UTF8, "text/plain");
+                response.Content = new StringContent("Invalid data.", Encoding.UTF8, "text/plain");
             }
 
             return response;

@@ -10,10 +10,10 @@ namespace ClassicLibrary.DAL.Abstract
 {
     public interface IDataService: IDisposable
     {
-        Repository<Book> Books { get; }
-        Repository<BookQueue> QueuedBooks { get; }
-        Repository<BorrowedBook> BorrowedBooks { get; }
-        Repository<ApplicationUser> Users { get; }
+        IRepository<Book> Books { get; }
+        IRepository<BookQueue> QueuedBooks { get; }
+        IRepository<BorrowedBook> BorrowedBooks { get; }
+        IRepository<ApplicationUser> Users { get; }
         void Save();
 
     }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ClassicLibrary.DAL.Abstract
 {
-    interface IRepository<TEntity>
+    public interface IRepository<TEntity>
     {
         bool Insert(TEntity entity);
         TEntity GetById(int id);

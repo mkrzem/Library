@@ -1,10 +1,7 @@
-﻿var app = angular.module('LibraryApp', ['ngRoute', 'ngResource', 'ui.bootstrap']);
-
-app.controller('MainController', ['$scope', '$location', function ($scope, $location) {
-    $scope.$location = $location;
-}]);
+﻿angular.module('LibraryApp', ['ngRoute', 'ngResource', 'ui.bootstrap']);
     
-app.config(['$routeProvider', '$locationProvider', '$httpProvider', function ($routeProvider, $locationProvider, $httpProvider) {
+angular.module('LibraryApp')
+       .config(['$routeProvider', '$locationProvider', '$httpProvider', function ($routeProvider, $locationProvider, $httpProvider) {
     $routeProvider
         .when('/Books', {
             controller: 'HomeController',

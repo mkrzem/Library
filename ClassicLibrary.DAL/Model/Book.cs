@@ -12,12 +12,12 @@ namespace ClassicLibrary.DAL.Model
 {
     public enum BookGenre
     {
-        Drama,
-        Action,
-        Crime,
-        SciFi,
-        Fantasy,
-        Classical
+        Drama = 0,
+        Action = 1,
+        Crime = 2,
+        SciFi = 3,
+        Fantasy = 4,
+        Classical = 5
     }
 
     public enum BookStatus
